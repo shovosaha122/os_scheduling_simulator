@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS Scheduling Simulator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="background"></div>
+
+<section id="homePage" class="page active">
+    <h1>⚡ OS Scheduling Simulator</h1>
+    <p class="subtitle">Select CPU Scheduling Algorithm</p>
+
+    <div class="cards">
+        <div class="algo-card" onclick="openAlgorithm('fcfs')">
+            <h2>FCFS</h2>
+            <p>First Come First Serve</p>
+        </div>
+        <div class="algo-card" onclick="openAlgorithm('sjf')">
+            <h2>SJF</h2>
+            <p>Shortest Job First</p>
+        </div>
+        <div class="algo-card" onclick="openAlgorithm('srtf')">
+            <h2>SRTF</h2>
+            <p>Shortest Remaining Time First</p>
+        </div>
+        <div class="algo-card" onclick="openAlgorithm('priority')">
+            <h2>Priority</h2>
+            <p>Priority Scheduling</p>
+        </div>
+        <div class="algo-card" onclick="openAlgorithm('rr')">
+            <h2>Round Robin</h2>
+            <p>Time Quantum Scheduling</p>
+        </div>
+    </div>
+</section>
+
+<section id="theoryPage" class="page">
+    <h1 id="theoryTitle">Algorithm Theory</h1>
+    
+    <div class="glass-card info-card">
+        <div id="theoryContent"></div>
+        <hr class="divider">
+        <h3>📋 Scheduling Criteria Formulas</h3>
+        <ul class="formula-list">
+            <li><strong>Turnaround Time (TAT)</strong> = Completion Time (CT) − Arrival Time (AT)</li>
+            <li><strong>Waiting Time (WT)</strong> = Turnaround Time (TAT) − Burst Time (BT)</li>
+            <li><strong>Response Time (RT)</strong> = Time Execution Starts − Arrival Time (AT)</li>
+        </ul>
+    </div>
+
+    <div class="buttons page-buttons">
+        <button onclick="goHome()">⬅ Back Home</button>
+        <button onclick="goToInputPage()">Create Table ➡️</button>
+    </div>
+</section>
+
+<section id="inputPage" class="page">
+    <h1 id="algoTitle"></h1>
+    <div class="glass-card">
+        
+        <div style="background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.3); padding: 15px; border-radius: 12px; margin-bottom: 25px; text-align: left;">
+            <p style="font-size: 14px; margin: 0; line-height: 1.5; color: #e2e8f0;">
+                🛡️ <strong>Active Starvation Protection Constraints:</strong><br>
+                • <strong>Starvation Threshold:</strong> Triggered once a process waits in the ready queue for <span style="color:#06b6d4; font-weight:bold;">&ge; 15 units</span>.<br>
+                • <strong>Aging Rule:</strong> Compensates wait delays by shifting or bumping priority status every <span style="color:#10b981; font-weight:bold;">5 excess units</span>.
+            </p>
+        </div>
+
+        <label>Number of Processes</label>
+        <input type="number" id="numProcesses" min="1" placeholder="Enter Number of Processes">
+        
+        <div style="margin: 20px 0; text-align: left;">
+            <p style="font-size: 16px; opacity: 0.8; margin-bottom: 12px; font-weight: 600;">🤖 Auto-Generate CPU Load Workloads:</p>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button type="button" onclick="quickLoadSimulator('low')" style="padding: 10px 16px; font-size: 14px; width: auto; background: linear-gradient(135deg, #10b981, #059669);">Low Load (3 Proc)</button>
+                <button type="button" onclick="quickLoadSimulator('medium')" style="padding: 10px 16px; font-size: 14px; width: auto; background: linear-gradient(135deg, #f59e0b, #d97706);">Medium Load (6 Proc)</button>
+                <button type="button" onclick="quickLoadSimulator('high')" style="padding: 10px 16px; font-size: 14px; width: auto; background: linear-gradient(135deg, #ef4444, #dc2626);">Heavy Load (12 Proc)</button>
+            </div>
+        </div>
+
+        <button onclick="generateInputs()">Continue</button>
+    </div>
+
+    <div id="processInputs"></div>
+
+    <div class="buttons input-buttons">
+        <button onclick="backToTheory()">⬅ Back to Theory</button>
+    </div>
+</section>
+
+<section id="resultPage" class="page">
+    <h1>📊 Scheduling Result</h1>
+    
+    <div class="glass-card visual-card">
+        <h2>📊 Gantt Chart</h2>
+        <div id="ganttContainer" class="gantt-wrapper"></div>
+    </div>
+
+    <div id="resultBox"></div>
+
+    <div id="graphicalPerformanceAnalytics" class="glass-card" style="text-align: left;"></div>
+
+    <div id="starvationAlertBox"></div>
+
+    <div class="glass-card" style="border-left: 4px solid #06b6d4; padding: 25px; margin-bottom: 20px; text-align: left;">
+        <h2 style="font-size: 22px; color: #06b6d4; margin-bottom: 8px;">🤖 Intelligent AI Advisor</h2>
+        <p id="aiRecommendationText" style="font-size: 16px; line-height: 1.5; opacity: 0.95;"></p>
+    </div>
+
+    <div class="buttons result-buttons">
+        <button onclick="backToInput()">⬅ Back</button>
+        <button onclick="goHome()">🏠 Home</button>
+        <button onclick="exitApp()">❌ Exit</button>
+    </div>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
