@@ -46,37 +46,37 @@ OS_Scheduling_Simulator/
 
 ### 1. Home Window
 
-![Home Window](screenshots/IMG-20260526-WA0029.jpg)
+![Home Window](IMG-20260526-WA0029.jpg)
 
 ---
 
 ### 2. FCFS Theory
 
-![FCFS Theory](screenshots/IMG-20260526-WA0022.jpg)
+![FCFS Theory](IMG-20260526-WA0022.jpg)
 
 ---
 
 ### 3. Process Entry Window
 
-![Process Entry](screenshots/IMG-20260603-WA0009.jpg)
+![Process Entry](IMG-20260603-WA0009.jpg)
 
 ---
 
 ### 4. Gantt Chart
 
-![Gantt Chart](screenshots/IMG-20260604-WA0000.jpg)
+![Gantt Chart](IMG-20260604-WA0000.jpg)
 
 ---
 
 ### 5. Scheduling Result Table
 
-![Result Table](screenshots/IMG-20260603-WA0013.jpg)
+![Result Table](IMG-20260603-WA0013.jpg)
 
 ---
 
 ### 6. Performance Graph
 
-![Performance Graph](screenshots/IMG-20260603-WA0005.jpg)
+![Performance Graph](IMG-20260603-WA0005.jpg)
 
 ## Learning Objectives
 
