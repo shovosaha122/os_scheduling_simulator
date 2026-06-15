@@ -96,7 +96,20 @@ This project demonstrates:
 
 Department of Information and Communication Technology (ICT)
 
-Bangladesh University of Professionals (BUP)
+Bangladesh University of Professionals (BUP) 
+
+📧 Email: shuvokumar122@gmail.com
+
+💼 LinkedIn:
+https://www.linkedin.com/in/shovo-saha-2aa5003aa
+
+💻 GitHub: https://github.com/shovosaha122
+
+---
+
+## Acknowledgements
+
+This project was developed as part of an Operating Systems course. Special thanks to my project teammates Hridita, Sourav and Suzana. 
 
 ---
 
